@@ -32,5 +32,13 @@ body,main{
     font-family: var(--Font1);
     margin-top: 100px;
 }
+.attribution{ 
+    color: white;
+}
+
+.attribution a{ 
+    color: var(--Blue);
+    
+}
 
 
