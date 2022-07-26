@@ -1,0 +1,157 @@
+.board-activity {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.board-activity img{
+    height: 35%;
+    z-index: 0;
+    display: flex;
+    margin-right: 10px;
+}
+.activity-info{
+    background-color: var(--DarkBlue);
+    height: 80%;
+    border-radius: 15px;
+    margin-top: -28px;
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    padding: 0 20px;
+}
+.activity-info:hover{
+    opacity: .9;
+    cursor: pointer;
+}
+.activity-info div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.activity-info h2{
+   color: var(--PaleBlue);
+   font-weight: 300;
+   font-size: 40px;
+   margin: 0;
+   margin: 20px 0 0 0 ;
+   
+}
+.activity-info h3{
+   color: var(--PaleBlue);
+   font-weight: 500;
+   margin: 20px 0 0 0 ;
+   font-size: 15px;
+
+}
+.activity-info p{
+    color: var(--DesaturatedBlue);
+   font-weight: 400;
+   font-size: 15px;
+   margin: 10px 0 0 0 ;
+}
+.activity-info img{
+    cursor: pointer;
+    margin-bottom: -15px;
+}
+
+
+
+
+
+
+/* bg */
+.board-work{
+    background-color: var(--LightRedWork);
+    animation: top 3s;
+
+}
+.board-play{
+    background-color: var(--SoftBluePlay);
+    animation: top 3.5s;
+
+}
+.board-study{
+    background-color: var(--LightRedStudy);
+    animation: rigth 3.5s;
+
+}
+.board-exercise{
+    background-color: var(--LimeGreenExercise);
+    animation: bottom 3.5s;
+
+}
+.board-social{
+    background-color: var(--VioletSocial);
+    animation: bottom 3s;
+
+}
+.board-self{
+    background-color: var(--SoftOrangeSelfCare);
+    animation: rigth 3s;
+}
+
+/* Animates */
+@keyframes rigth {
+    0%{
+        transform: translateX(500px) scale(0);
+    }
+    100%{
+        transform: translateX(0px) scale(1);
+        
+    }
+}
+@keyframes top {
+    0%{
+        transform: translateY(-500px)scale(0);
+    }
+    100%{
+        transform: translateY(0px)scale(1);
+        
+    }
+}
+
+@keyframes bottom {
+    0%{
+        transform: translateY(500px)scale(0);
+    }
+    100%{
+        transform: translateY(0px)scale(1);
+        
+    }
+}
+@keyframes left {
+    0%{
+        transform: translatex(-500px) scale(0);
+    }
+    100%{
+        transform: translateY(0px) scale(1);
+        
+    }
+}
+
+@media (max-width:450px) {
+    .activity-info{
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 10px 30px;
+        margin-bottom: -10px;
+    }
+    .activity-info div{
+        grid-column: 1/3;
+    }
+    .activity-info h3{
+        font-size: 26px;
+    }
+    .activity-info p{
+        text-align: center;
+        margin-top: 35px;
+        font-size: 17px;
+    }
+    .activity-info img{
+        width: 32px;
+        height: 12px;
+    }
+}

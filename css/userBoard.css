@@ -1,0 +1,120 @@
+.board{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.board-main{
+    grid-row: 1 / 3;
+    background-color: var(--DarkBlue);
+    border-radius: 15px;
+    width: 250px;
+    animation: left 3.5s;
+}
+
+.user-container{
+    padding: 50px 30px;
+    background-color: var(--Blue);
+    border-radius: 15px;
+    height: 45%;
+}
+.board-main img{
+    width: 70px;
+    border-radius: 40px;
+    border: var(--PaleBlue) 3px solid;
+}
+
+.board-main h1{
+    color: var(--PaleBlue);
+    font-size: 37px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.board-main p{
+    margin-bottom: -2px;
+    margin-top: 20px;
+    color: var(--PaleBlue);
+    font-weight: 300;
+}
+
+/* Nav */
+.board-main nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 32%;
+}
+
+.board-main a{
+    margin: 10px 20px;
+    color: var(--DesaturatedBlue);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.board-main a:hover{
+    color: var(--PaleBlue);
+}
+
+
+@media (max-width:900px) {
+    body,main{
+        margin-top: 20px !important;
+    }
+    .board{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+}
+@media (max-width:650px) {
+    body,main{
+        margin-top: 20px !important;
+     }
+    .board{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:450px) {
+    .board{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .board-main{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .user-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 10px;
+        width: 95%;
+        
+    }
+    .user-container img{
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+    }
+    .user-container h1{
+        font-size: 26px;
+    }
+    .user-container p{
+        margin: 0;
+    }
+    .board-main nav{
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: space-around;
+        font-size: 16px;
+    }
+    .board-main a{
+       
+        font-size: 20px;
+    }
+}
